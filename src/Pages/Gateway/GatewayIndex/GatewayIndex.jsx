@@ -10,6 +10,7 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { WalletDisconnectButton, WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import React from "react";
 import {} from "../../../Components/Tags/Tags";
+import numeral from "numeral";
 
 const DepositModal = ({ isModalHidden, setIsModalHidden }) => {
   return (

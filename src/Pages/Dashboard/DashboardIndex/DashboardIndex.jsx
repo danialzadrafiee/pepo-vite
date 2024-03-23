@@ -13,10 +13,9 @@ const DashboardIndex = () => {
   const [investAmount, setInvestAmount] = useState(0.5);
   const { setIsMenuOpen } = useMainContext(false);
   const { publicKey, sendTransaction, wallet } = useWallet();
-  console.log(publicKey);
 
-  const amounts = [0.01, 0.05, 0.1, 1, 5];
-  const conversionRate = 1000000000;
+  const amounts = import.meta.env.VITE_AMOUNTS.split(",").map(Number);
+  const convertRate = import.meta.env.VITE_CONVERT_RATE;
 
   return (
     <Container className="p-5 xl:min-h-screen  min-h-dvh bg-pep">
@@ -58,7 +57,7 @@ const DashboardIndex = () => {
             <Grid>
               <Label className="text-sm mb-1">You Receive</Label>
               <Relative className="w-full">
-                <input type="text" value={numeral(investAmount * conversionRate).format("0,0")} readOnly className="rounded w-full bg-primary-1000 border border-primary-500" />
+                <input type="text" value={numeral(investAmount * convertRate).format("0,0")} readOnly className="rounded w-full bg-primary-1000 border border-primary-500" />
                 <Absolute className="right-3 top-0 bottom-0 flex items-center justify-center">PPLON</Absolute>
               </Relative>
             </Grid>
@@ -82,9 +81,10 @@ const DashboardIndex = () => {
             <div>
               <button
                 onClick={async () => {
-                  const connection = new Connection("https://api.devnet.solana.com");
-                  let recipientPublicKey = new PublicKey("EkS8ruodTS1NAhGXN4t4cMUbQ6p4UPr5tTV25oyqwc4D");
-                  let lamports = investAmount * 1000000000;
+                  const connection = new Connection(import.meta.env.VITE_RPC);
+                  let recipientPublicKey = new PublicKey(import.meta.env.VITE_TOKEN_OWNER_WALLET);
+                  const solLamportRatio = 1000000000;
+                  let lamports = investAmount * solLamportRatio;
                   let transaction = new Transaction().add(
                     SystemProgram.transfer({
                       fromPubkey: publicKey,

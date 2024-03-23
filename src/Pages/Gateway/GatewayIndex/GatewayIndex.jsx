@@ -25,8 +25,8 @@ const DepositModal = ({ isModalHidden, setIsModalHidden }) => {
           <div className="bg-white rounded p-2">
             <QRCode value="hey" size={200} />
           </div>
-          <div className="text-center text-sm break-all mt-2">71N2X8HyGzU3c79TZRLe5vFhmh1NaS4kqD7qhynaJHFN</div>
-          <div className="rounded p-2 bg-primary-950 text-sm mt-2">1Sol = 1000 $PPOL</div>
+          <div className="text-center text-sm break-all mt-2">{import.meta.env.VITE_TOKEN_OWNER_WALLET}</div>
+          <div className="rounded p-2 bg-primary-950 text-sm mt-2">1Sol = {numeral(import.meta.env.VITE_PEPOLEON_PER_SOL_RATE).format("0,0")} $PPOL</div>
           <small className="text-center text-primary-500 mt-2">Your will recive your tokens immediately after deposist </small>
         </Flex>
       </Inside>
@@ -78,7 +78,7 @@ const GatewayIndex = () => {
                   <WalletMultiButton />
                 </div>
               </div>
-              <div onClick={() => setIsModalHidden(false)} className="mt-2 text-sm">
+              <div  onClick={() => setIsModalHidden(false)} className="mt-2 cursor-pointer text-sm">
                 Deposit Manualy
               </div>
             </Grid>

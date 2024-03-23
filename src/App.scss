@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  color: white;
+}
+.bg-pep {
+  background: url("/img/bg.svg"), radial-gradient(97.43% 55.38% at 26.2% 50%, #0d230e 0%, #0d230e 0.01%, #07130f 100%);
+}
+.bg-pep-nopat {
+  background: radial-gradient(97.43% 55.38% at 26.2% 50%, #0d230e 0%, #0d230e 0.01%, #07130f 100%);
+}
+.text-pep {
+  background: linear-gradient(180deg, #82fe3e 0%, #5aa900 91.55%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-shadow: 0px 5.56407px 5.56407px rgba(0, 0, 0, 0.25);
+}
+.bar-pep {
+  box-shadow: 0px -5.402px 0.429px 0px rgba(0, 0, 0, 0.12) inset;
+}
+.connect {
+  .wallet-adapter-button-trigger {
+    border-radius: 9999px !important;
+    border: 2px solid #88ff46 !important;
+    background: linear-gradient(180deg, #8fff11 0%, #56ab28 100%) !important;
+    color: #13201f !important;
+  }
+}
+.disconnect {
+  .wallet-adapter-button-trigger {
+    height: 40px;
+    background-color: transparent;
+  }
+}
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

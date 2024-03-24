@@ -13,7 +13,7 @@ const ProgressBar = ({ className }) => {
   useEffect(() => {
     async function getTokenBalance() {
       // Connect to cluster
-      const connection = new Connection('https://few-clean-model.solana-mainnet.quiknode.pro/');
+      const connection = new Connection('https://few-clean-model.solana-mainnet.quiknode.pro/03cebda61c99f6365e767cfccf4b3008b4493e16/');
       let tokenMintAddress = new PublicKey(import.meta.env.VITE_TOKEN_ADDRESS);
       let holderPublicKey = new PublicKey(import.meta.env.VITE_TOKEN_OWNER_WALLET);
 

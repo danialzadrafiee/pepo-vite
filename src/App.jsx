@@ -19,7 +19,7 @@ function WalletProviderErrorCallBack(error) {
 const App = () => {
   const network = WalletAdapterNetwork.Devnet;
 
-  const endpoint = "https://few-clean-model.solana-mainnet.quiknode.pro/";
+  const endpoint = "https://few-clean-model.solana-mainnet.quiknode.pro/03cebda61c99f6365e767cfccf4b3008b4493e16/";
   const wallets = useMemo(() => [new PhantomWalletAdapter(), new SolflareWalletAdapter(), new TorusWalletAdapter(), new LedgerWalletAdapter()], [network]);
 
   const onError = useCallback((error) => {

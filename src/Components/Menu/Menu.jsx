@@ -19,19 +19,23 @@ const Menu = () => {
           <Body>
             <Grid className="gap-4 text-xl mt-8 place-items-center">
               <img src="./img/logo-xl.png" alt="" />
-              <div >Dashboard</div>
-              <div>Roadmap</div>
+              <div>Dashboard</div>
+              {/* <div>Roadmap</div> */}
               <div>Tokenomic</div>
-              <div>Terms</div>
-              <div>Support</div>
+              {/* <div>Terms</div> */}
+              {/* <div>Support</div> */}
               <div className="w-[80%] h-[1px] bg-primary-800/40"></div>
               <Flex className="gap-2">
-                <IconButton>
-                  <TelegramLogo size={24} weight="fill" />
-                </IconButton>
-                <IconButton>
-                  <TwitterLogo size={24} weight="fill" />
-                </IconButton>
+                <a href="https://t.me/PepoleonPortal" target="_blank">
+                  <IconButton>
+                    <TelegramLogo size={24} weight="fill" />
+                  </IconButton>
+                </a>
+                <a href="https://twitter.com/pepoleononsol" target="_blank">
+                  <IconButton>
+                    <TwitterLogo size={24} weight="fill" />
+                  </IconButton>
+                </a>
               </Flex>
             </Grid>
           </Body>

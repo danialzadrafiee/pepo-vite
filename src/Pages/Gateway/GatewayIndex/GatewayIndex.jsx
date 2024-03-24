@@ -48,12 +48,16 @@ const GatewayIndex = () => {
           <header>
             <Flex className="items-center justify-between">
               <Flex className="gap-2 items-center">
-                <IconButton>
-                  <TelegramLogo size={24} weight="fill" />
-                </IconButton>
-                <IconButton>
-                  <TwitterLogo size={24} weight="fill" />
-                </IconButton>
+                <a href="https://t.me/PepoleonPortal" target="_blank">
+                  <IconButton>
+                    <TelegramLogo size={24} weight="fill" />
+                  </IconButton>
+                </a>
+                <a href="https://twitter.com/pepoleononsol" target="_blank">
+                  <IconButton>
+                    <TwitterLogo size={24} weight="fill" />
+                  </IconButton>
+                </a>
               </Flex>
               <IconButton onClick={() => setIsMenuOpen(true)}>
                 <List size={24} weight="fill" />
@@ -79,17 +83,17 @@ const GatewayIndex = () => {
                   <WalletMultiButton />
                 </div>
               </div>
-              <div  onClick={() => setIsModalHidden(false)} className="mt-2 cursor-pointer text-sm">
+              <div onClick={() => setIsModalHidden(false)} className="mt-2 cursor-pointer text-sm">
                 Deposit Manualy
               </div>
             </Grid>
           </Hero>
-          <footer className=" bottom-0">
+          {/* <footer className=" bottom-0">
             <Flex className="gap-6 opacity-80 hover:opacity-100 py-4 text-xs">
               <div>Terms</div>
               <div>Support</div>
             </Flex>
-          </footer>
+          </footer> */}
         </div>
       </Container>
     </>

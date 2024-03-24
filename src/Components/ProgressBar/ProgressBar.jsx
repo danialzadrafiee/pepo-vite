@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Absolute } from "../Tags/Tags";
 import { Tooltip } from "react-tooltip";
 import ReactDOMServer from "react-dom/server";
@@ -9,6 +9,7 @@ const ProgressBar = ({ className }) => {
   const [filled, setFilled] = useState(0);
   const total = import.meta.env.VITE_TOTAL_TOKEN;
   const PPLONPerSolRate = import.meta.env.VITE_PEPOLEON_PER_SOL_RATE;
+
   useEffect(() => {
     async function getTokenBalance() {
       // Connect to cluster
@@ -22,7 +23,7 @@ const ProgressBar = ({ className }) => {
       tokenAccounts.value.forEach((tokenAccount) => {
         const accountData = AccountLayout.decode(tokenAccount.account.data);
         const mintAddress = new PublicKey(accountData.mint);
-        console.log(accountData);
+      
         if (mintAddress.equals(tokenMintAddress)) {
           const left = Number(accountData.amount) / 10 ** import.meta.env.VITE_DECIMALS;
           const filled = total - left;
@@ -42,8 +43,8 @@ const ProgressBar = ({ className }) => {
               <div
                 data-tooltip-id="my-tooltip"
                 data-tooltip-html={ReactDOMServer.renderToStaticMarkup(
-                  <div className="flex flex-col items-center justify-center">
-                    <div>{numeral(filled).format(0, 0)} PPLON</div>
+                  <div className="flex flex-col items-center text-xs lg:text-sm justify-center">
+                    <div>{numeral(filled).format(0, 0)} $PPLON</div>
                     <div>{(filled / PPLONPerSolRate).toFixed(2)} SOL</div>
                   </div>
                 )}
@@ -54,11 +55,12 @@ const ProgressBar = ({ className }) => {
             </div>
             <Absolute className="right-3 text-sm bottom-0 top-0 flex items-center justify-center">{((filled / total) * 100).toFixed(2)}%</Absolute>
           </div>
-            <img src="./img/hourse.png" className="h-10   lg:h-20 z-10 -left-2 lg:-left-10 absolute -top-2" />
-          <Absolute className="right-3 text-sm bottom-0 top-14 flex items-center justify-center">Total : {numeral(total).format(0, 0)}</Absolute>
+          <img alt="" style={{ left: `calc(${(filled / total) * 100}% - 25px)` }} src="./img/hourse.png" className="h-10   lg:h-20 z-10  lg:-left-10 absolute -top-2" />
+          <Absolute className="right-3 text-xs lg:text-sm bottom-0 lg:top-14 top-10  flex items-center justify-center z-[5] ">Total : {numeral(total).format(0, 0)}</Absolute>
         </div>
       </div>
-      <Tooltip style={{ backgroundColor: "#5ED820", color: "#102c07", opacity: 1, fontWeight: "semibold" }} id="my-tooltip" isOpen={true} />
+
+      <Tooltip style={{ backgroundColor: "#5ED820", paddingTop: "10px", color: "#102c07", opacity: 1, fontWeight: "semibold" }} id="my-tooltip" isOpen={true} />
     </>
   );
 };

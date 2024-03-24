@@ -1,11 +1,11 @@
 import ProgressBar from "@/Components/ProgressBar/ProgressBar";
 import { Absolute, Container, Flex, Grid, Hero, Logo, Relative, Text, Inside } from "@/Components/Tags/Tags";
-import { List, TelegramLogo, TwitterLogo, X } from "@phosphor-icons/react";
+import { List, Pause, Play, TelegramLogo, TwitterLogo, X } from "@phosphor-icons/react";
 import "react-tooltip/dist/react-tooltip.css";
 import IconButton from "@/Components/IconButton/IconButton";
 import { useMainContext } from "@/Context";
 import QRCode from "react-qr-code";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { WalletDisconnectButton, WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import React from "react";
@@ -39,12 +39,25 @@ const GatewayIndex = () => {
   const { setIsMenuOpen } = useMainContext(false);
   const { publicKey, sendTransaction } = useWallet();
   const [isModalHidden, setIsModalHidden] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+  const playAudio = () => {
+    if (audioRef.current) {
+      if (!isPlaying) {
+        audioRef.current.play().catch((error) => console.error("Error attempting to play audio:", error));
+        setIsPlaying(true);
+      } else {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      }
+    }
+  };
 
   return (
     <>
       <DepositModal {...{ isModalHidden, setIsModalHidden }} />
-      <Container className="p-5 xl:min-h-screen  min-h-dvh flex bg-pep ">
-        <div className="md:max-w-md 2xl:scale-125 origin-top flex flex-col justify-between h-full md:max-h-[800px] mx-auto">
+      <Container className="p-5 xl:py-10  xl:min-h-screen  min-h-dvh flex bg-pep ">
+        <div className="xl:max-w-2xl  2xl:scale-125 origin-top flex flex-col justify-between h-full md:max-h-[800px] mx-auto">
           <header>
             <Flex className="items-center justify-between">
               <Flex className="gap-2 items-center">
@@ -66,8 +79,12 @@ const GatewayIndex = () => {
           </header>
           <Hero>
             <Grid className="place-items-center px-4">
-              <Logo>
+              <Logo className="flex items-center justify-center flex-col">
                 <img src="./img/logo-xl.png" alt="Pepoleon Logo"></img>
+                <button className={"rounded-full text-primary-600 -mt-8 p-2 bg-primary-1000 border border-primary-600"} onClick={playAudio}>
+                  {!isPlaying && <Play size={16} weight="fill" />}
+                  {isPlaying && <Pause size={16} weight="fill" />}
+                </button>
               </Logo>
               <h1 className="text-6xl font-impact text-pep">Pepoleon</h1>
               <h2 className="text-2xl font-impact text-pep mt-1">Presale</h2>
@@ -88,6 +105,8 @@ const GatewayIndex = () => {
               </div>
             </Grid>
           </Hero>
+          <audio ref={audioRef} src="/nothing.mp3"></audio>
+
           {/* <footer className=" bottom-0">
             <Flex className="gap-6 opacity-80 hover:opacity-100 py-4 text-xs">
               <div>Terms</div>

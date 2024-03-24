@@ -115,6 +115,69 @@ const GatewayIndex = () => {
           </footer> */}
         </div>
       </Container>
+      <Container className="  xl:py-10 -mt-2  flex bg-pep ">
+        <div className="flex w-full flex-col">
+          <div className="w-full flex mt-5 items-center justify-between ">
+            <img src="./img/rod.png" className="w-[160px]" />
+            <div className="text-xs pr-5">Remember, gentlemen, the corpse of an enemy always smells sweet.</div>
+          </div>
+          <div className="bg-black/40 p-4 h-64 overflow-auto">
+            <div className="bg-black/50 rounded p-2">
+              <h2 className="font-semibold">Goal</h2>
+              <div className="text-xs">
+                Pepoleon Ponaparte stands at the head of his great army, the edge of his sword thirstier for blood than a shark. Oh, my army, hurry up so we can make the meme world ours.
+              </div>
+              <div className="text-xs mt-5 ">
+                <h2 className="font-semibold text-base">Roadmap</h2>
+
+                <ul className="space-y-3 ">
+                  <li>
+                    1. Preparing: We're going to start with a presale. We've designed a user-friendly website for early investors. You will connect your wallet with just one click, enter your amount,
+                    touch the buy button, and you're done, PPLON tokens are in your wallet.
+                  </li>
+                  <li>
+                    2. Networking: Community is the main value of Pepoleon. During the presale, Pepoleon's plan is to save a part of the attracted budget for the liquid ity pool and return another
+                    part to the media to expand the commun ity with advertising and marketing.
+                  </li>
+                  <li>3. Listing: After the presale, Pepoleon will be listed on "raydium.io".</li>
+                  <li>4. Following the initial listing, we plan to list our base pair on Uniswap and other mainstream DEXes.</li>
+                  <li>5. Trust Building: We will list Pepoleon on trusted services like CMC and CoinGecko.</li>
+                  <li>6. Dynamic Advertising: During the Dex, we will continue our social media advertising campaigns with rewards and airdrops for the community.</li>
+                  <li>7. Additional Features: Our dev team is working on an NFT marketplace and additional Dev Tools right now. We will launch them during the Dex stage.</li>
+                  <li>8. Central Listing: We are negotiating with different third parties. Our plan is to list Pepoleon on major CEXes as soon as possible.</li>
+                  <li>9. Competition: Our final goal is to become the largest Meme coin community. We will keep up our competition until Pepoleon conquer all meme coins.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+      <Container className="  xl:py-10 pb-10 -mt-2 flex bg-pep ">
+        <div className="flex flex-col w-full">
+          <div className="w-full flex mt-10 items-center justify-between ">
+            <div className="text-lg pr-5 w-full items-center justify-center flex font-bold ">Tokenomics</div>
+            <img src="./img/tok.png" className="  w-[160px]" />
+          </div>
+          <Grid className="grid-cols-2 p-8 bg-black/50 gap-4">
+            <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
+              <span>TOTAL SUPPLY</span>
+              <span>500M</span>
+            </div>
+            <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
+              <span>100% LP</span>
+              <span>0% PRESALE</span>
+            </div>
+            <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
+              <span>LP BURNE</span>
+              <span>AT LAUNCH</span>
+            </div>
+            <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
+              <span>OWNERSHIP</span>
+              <span>REVOKE</span>
+            </div>
+          </Grid>
+        </div>
+      </Container>
     </>
   );
 };

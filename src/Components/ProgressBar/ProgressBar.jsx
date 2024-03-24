@@ -33,7 +33,7 @@ const ProgressBar = ({ className }) => {
         }
       });
     }
-    if (!balanceRecived) {
+    if (filled == 0) {
       getTokenBalance();
     }
   }, []);

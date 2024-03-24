@@ -36,8 +36,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+        poppins: ["Poppins", ...defaultTheme.fontFamily.sans],
         impact: ["Impact", ...defaultTheme.fontFamily.sans],
+        figtree: ["figtree", ...defaultTheme.fontFamily.sans],
       },
     },
   },

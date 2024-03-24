@@ -57,7 +57,8 @@ const GatewayIndex = () => {
     <>
       <div className="bg-pep">
         <DepositModal {...{ isModalHidden, setIsModalHidden }} />
-        <Container id="presale" className="p-5 xl:py-10  xl:min-h-min xl:pb-36  min-h-dvh flex  ">
+        {/* hero */}
+        <Container id="presale" className="p-5 xl:py-10  xl:min-h-min xl:pb-36 flex  ">
           <div className="xl:max-w-4xl  2xl:scale-125 origin-top flex flex-col justify-between h-full md:max-h-[800px] mx-auto">
             <header>
               <Flex className="items-center justify-between">
@@ -90,8 +91,7 @@ const GatewayIndex = () => {
                 <h1 className="text-6xl font-impact text-pep">Pepoleon</h1>
                 <h2 className="text-2xl font-impact text-pep mt-1">Presale</h2>
                 <Text className="text-center xl:text-base text-xs mt-2">
-                Join Pepoleon’s great army to conquer all the memes.{" "}
-                  <strong className="text-primary-400">You will receive your tokens immediately after depositing</strong>
+                  Join Pepoleon’s great army to conquer all the memes. <strong className="text-primary-400">You will receive your tokens immediately after depositing</strong>
                 </Text>
                 <div className="w-full">
                   <ProgressBar className="w-full mt-4"></ProgressBar>
@@ -107,41 +107,34 @@ const GatewayIndex = () => {
               </Grid>
             </Hero>
             <audio ref={audioRef} src="/nothing.mp3"></audio>
-
-            {/* <footer className=" bottom-0">
-            <Flex className="gap-6 opacity-80 hover:opacity-100 py-4 text-xs">
-              <div>Terms</div>
-              <div>Support</div>
-            </Flex>
-          </footer> */}
           </div>
         </Container>
-
+        {/* about */}
         <Container id="roadmap" className="  xl:py-10 -mt-2  flex ">
           <div className="flex lg:max-w-4xl mx-auto w-full flex-col">
             <div className="w-full flex mt-5 items-center justify-between ">
               <img src="./img/hourse.png" className="w-[160px]  relative lg:w-[250px]" />
-              <div className="text-xs lg:text-xl font-bold bold w-full flex items-center justify-center">About</div>
+              <div className=" lg:text-xl px-5 w-full flex items-center justify-center">Remember, gentlemen, the corpse of an enemy always smells sweet.</div>
             </div>
-            <div className="bg-black/40 p-4 h-64 lg:h-max overflow-auto">
+            <div className="bg-black/40 p-4 overflow-auto">
               <div className="bg-black/50 rounded p-2">
-                <div className="text-xs lg:text-base">
-                  Meme Conquest Awaits The internet is drowning in normie memes. Bland, uninspired, and utterly forgettable. The dream of a true Meme Empire fades without a
-                  memeperor. But fear not, for Pepoleon has arrived! We, the Pepoleon Army, are tired of these pretenders. We yearn for a leader with a strategic mind, a bicorne that demands respect,
-                  and the undeniable swagger of a true memperor. Join us, and together we shall: Wage war on the normies: No more recycled formats, no more uninspired rehashes. We will conquer the
-                  memes with fresh LOLs and originality. Build a Meme Empire: From the dankest corners of Reddit to the fleeting glory of Twitter trends, our dominion shall spread. We will leave other
-                  meme coins trembling in our wake. Moon with the Power of Laughter: Forget Lambos. We'll be soaring through the digital stratosphere, fueled by the unbridled joy of a perfectly
-                  executed meme. We'll tweet, we'll meme, we'll moon. Are you ready to make Meme Nation truly chad again? Then enlist in the Pepoleon Army today!
+                <div className="text-sm lg:text-base">
+                  Meme Conquest Awaits The internet is drowning in normie memes. Bland, uninspired, and utterly forgettable. The dream of a true Meme Empire fades without a memeperor. But fear not,
+                  for Pepoleon has arrived! We, the Pepoleon Army, are tired of these pretenders. We yearn for a leader with a strategic mind, a bicorne that demands respect, and the undeniable
+                  swagger of a true memperor. Join us, and together we shall: Wage war on the normies: No more recycled formats, no more uninspired rehashes. We will conquer the memes with fresh LOLs
+                  and originality. Build a Meme Empire: From the dankest corners of Reddit to the fleeting glory of Twitter trends, our dominion shall spread. We will leave other meme coins trembling
+                  in our wake. Moon with the Power of Laughter: Forget Lambos. We'll be soaring through the digital stratosphere, fueled by the unbridled joy of a perfectly executed meme. We'll tweet,
+                  we'll meme, we'll moon. Are you ready to make Meme Nation truly chad again? Then enlist in the Pepoleon Army today!
                 </div>
               </div>
             </div>
           </div>
         </Container>
-
+        {/* tokenomics */}
         <Container id="tokenomics" className="  xl:py-10 pb-10 -mt-2 flex  ">
           <div className="flex lg:max-w-4xl mx-auto w-full flex-col">
             <div className="w-full flex mt-10 items-center justify-between ">
-              <div className="text-lg pr-5 w-full items-center justify-center flex font-bold ">Tokenomics</div>
+              <div className=" px-5 w-full items-center justify-center flex  ">In Tokens We Trust, For Memes We Thrust</div>
               <img src="./img/tok.png" className="  w-[160px] lg:w-[250px]" />
             </div>
             <Grid className="grid-cols-2 p-8 bg-black/50 gap-4">
@@ -164,12 +157,12 @@ const GatewayIndex = () => {
             </Grid>
           </div>
         </Container>
-
+        {/* roadmap */}
         <Container id="roadmap" className="  xl:py-10 -mt-2  flex ">
           <div className="flex lg:max-w-4xl mx-auto w-full flex-col">
             <div className="w-full flex mt-5 items-center justify-between ">
               <img src="./img/rod.png" className="w-[160px] lg:w-[250px]" />
-              <div className="text-xs lg:text-base pr-5">Remember, gentlemen, the corpse of an enemy always smells sweet.</div>
+              <div className="lg:text-base pr-5">A man without  a plan for the day is lost before he starts.</div>
             </div>
             <div className="bg-black/40 p-4 h-64 lg:h-max overflow-auto">
               <div className="bg-black/50 rounded p-2">

@@ -126,7 +126,7 @@ const GatewayIndex = () => {
             <div className="bg-black/40 p-4 h-64 lg:h-max overflow-auto">
               <div className="bg-black/50 rounded p-2">
                 <div className="text-xs lg:text-base">
-                  The Pepoleon Army: Meme Conquest Awaits The internet is drowning in normie memes. Bland, uninspired, and utterly forgettable. The dream of a true Meme Empire fades without a
+                  Meme Conquest Awaits The internet is drowning in normie memes. Bland, uninspired, and utterly forgettable. The dream of a true Meme Empire fades without a
                   memeperor. But fear not, for Pepoleon has arrived! We, the Pepoleon Army, are tired of these pretenders. We yearn for a leader with a strategic mind, a bicorne that demands respect,
                   and the undeniable swagger of a true memperor. Join us, and together we shall: Wage war on the normies: No more recycled formats, no more uninspired rehashes. We will conquer the
                   memes with fresh LOLs and originality. Build a Meme Empire: From the dankest corners of Reddit to the fleeting glory of Twitter trends, our dominion shall spread. We will leave other

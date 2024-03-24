@@ -28,7 +28,7 @@ const DepositModal = ({ isModalHidden, setIsModalHidden }) => {
           </div>
           <div className="text-center text-sm break-all mt-2">{import.meta.env.VITE_TOKEN_OWNER_WALLET}</div>
           <div className="rounded p-2 bg-primary-950 text-sm mt-2">1Sol = {numeral(import.meta.env.VITE_PEPOLEON_PER_SOL_RATE).format("0,0")} $PPOL</div>
-          <small className="text-center text-primary-500 mt-2">Your will recive your tokens immediately after deposist </small>
+          <small className="text-center text-primary-500 mt-2">You will receive your tokens immediately after depositing. </small>
         </Flex>
       </Inside>
     </div>
@@ -90,8 +90,8 @@ const GatewayIndex = () => {
                 <h1 className="text-6xl font-impact text-pep">Pepoleon</h1>
                 <h2 className="text-2xl font-impact text-pep mt-1">Presale</h2>
                 <Text className="text-center xl:text-base text-xs mt-2">
-                  The Pepoleon Presale Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus optio laborum quasin.{" "}
-                  <strong className="text-primary-400">You recive your tokens immediately after deposit</strong>
+                Join Pepoleon’s great army to conquer all the memes.{" "}
+                  <strong className="text-primary-400">You will receive your tokens immediately after depositing</strong>
                 </Text>
                 <div className="w-full">
                   <ProgressBar className="w-full mt-4"></ProgressBar>

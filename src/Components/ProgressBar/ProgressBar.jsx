@@ -26,6 +26,7 @@ const ProgressBar = ({ className }) => {
         const mintAddress = new PublicKey(accountData.mint);
         if (mintAddress.equals(tokenMintAddress)) {
           const left = Number(accountData.amount) / 10 ** import.meta.env.VITE_DECIMALS;
+          console.log(left);
           const filled = total - left;
           setFilled(filled);
           setBalanceReceived(true);

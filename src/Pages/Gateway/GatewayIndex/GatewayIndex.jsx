@@ -37,7 +37,6 @@ const DepositModal = ({ isModalHidden, setIsModalHidden }) => {
 
 const GatewayIndex = () => {
   const { setIsMenuOpen } = useMainContext(false);
-  const { publicKey, sendTransaction } = useWallet();
   const [isModalHidden, setIsModalHidden] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);

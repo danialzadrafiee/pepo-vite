@@ -19,8 +19,8 @@ function WalletProviderErrorCallBack(error) {
 const App = () => {
   const network = WalletAdapterNetwork.Devnet;
 
-  const endpoint = useMemo(() => clusterApiUrl(network), [network]);
-
+  const endpoint =
+    "https://solana-mainnet.api.syndica.io/api-token/2hpkgDN3ojB497jyBmYWybReuuay9TBGy1wofkuPgvPesTTLUndVqPqPJ5pxGz4otSKd4YUJytccVp1cMXETFQHARkbfxKi1wBrvZYz3MCWs1pX7P7ZfhdzJBDk5TG5x1NQqVmNQya592VmLEM9FgVHsXLrsccGooSkYNYXTrezNm5aRL8PsoS1UHGYcqhKjSq21MHhdQZKLYLZiXiz4bdQDPdQRG2y22xHbwTFXNSGgBD6NonoSyeGXtoBNnhg432ggmJDMn6zV6gQHRVC3rdHxCmC1gB6CqzqfSqVL7HUdGfabVnUD1Tcw6zNnVjXfpc7cnfEHBzbr7rCmAyeYYKZd6MJecun7L2nQkpBgR9gTLGEYpJj6y5tDca78dsWexscFmDPKervHwNY8qUAfi2Fp79rBE7SDMsoWwtjdpj3sTVWYVMJ5vQcTbbVacKbqFxH8PxLLDWTjofd5pfKKgHmEbJRfRajX21hQPAgmixCtiBhHqwEYraeuy5y8p";
   const wallets = useMemo(() => [new PhantomWalletAdapter(), new SolflareWalletAdapter(), new TorusWalletAdapter(), new LedgerWalletAdapter()], [network]);
 
   const onError = useCallback((error) => {

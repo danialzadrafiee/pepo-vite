@@ -135,22 +135,22 @@ const GatewayIndex = () => {
           <div className="flex lg:max-w-4xl mx-auto w-full flex-col">
             <div className="w-full flex mt-10 items-center justify-between ">
               <div className=" px-5 w-full items-center justify-center flex  ">In Tokens We Trust, For Memes We Thrust</div>
-              <img src="./img/tok.png" className="  w-[160px] lg:w-[250px]" />
+              <img src="./img/tok.png" className=" mr-3  w-[160px] lg:w-[250px]" />
             </div>
-            <Grid className="grid-cols-2 p-8 bg-black/50 gap-4">
-              <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
+            <Grid className="grid-cols-2 px-8 from-primary-/50 to-transparent bg-gradient-to-b gap-4">
+              <div className="rounded-lg bg-pep border-2 p-4 flex flex-col border-primary-500 items-center justify-center">
                 <span>TOTAL SUPPLY</span>
                 <span>690B</span>
               </div>
-              <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
+              <div className="rounded-lg bg-pep border-2 p-4 flex flex-col border-primary-500 items-center justify-center">
                 <span>PRESALE</span>
                 <span>379.5B</span>
               </div>
-              <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
+              <div className="rounded-lg bg-pep border-2 p-4 flex flex-col border-primary-500 items-center justify-center">
                 <span>LP BURNE</span>
                 <span>AT LAUNCH</span>
               </div>
-              <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
+              <div className="rounded-lg bg-pep border-2 p-4 flex flex-col border-primary-500 items-center justify-center">
                 <span>OWNERSHIP</span>
                 <span>REVOKE</span>
               </div>
@@ -164,8 +164,8 @@ const GatewayIndex = () => {
               <img src="./img/rod.png" className="w-[160px] lg:w-[250px]" />
               <div className="lg:text-base pr-5">A man without  a plan for the day is lost before he starts.</div>
             </div>
-            <div className="bg-black/40 p-4 h-64 lg:h-max overflow-auto">
-              <div className="bg-black/50 rounded p-2">
+            <div className="  h-64 lg:h-max overflow-auto">
+              <div className=" from-primary-1000/50 to-transparent bg-gradient-to-b  rounded p-4">
                 <h2 className="font-semibold lg:text-lg">Goal</h2>
                 <div className="text-xs lg:text-base">
                   Pepoleon Ponaparte stands at the head of his great army, the edge of his sword thirstier for blood than a shark. Oh, my army, hurry up so we can make the meme world ours.

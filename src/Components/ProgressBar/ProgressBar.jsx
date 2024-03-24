@@ -14,7 +14,7 @@ const ProgressBar = ({ className }) => {
     async function getTokenBalance() {
       // Connect to cluster
       // const connection = new Connection('https://few-clean-model.solana-mainnet.quiknode.pro/03cebda61c99f6365e767cfccf4b3008b4493e16/');
-      const connection = new Connection("https://api.mainnet-beta.solana.com");
+      const connection = new Connection('https://rpc.theindex.io', 'finalized');
       let tokenMintAddress = new PublicKey(import.meta.env.VITE_TOKEN_ADDRESS);
       let holderPublicKey = new PublicKey(import.meta.env.VITE_TOKEN_OWNER_WALLET);
 
@@ -24,7 +24,6 @@ const ProgressBar = ({ className }) => {
       tokenAccounts.value.forEach((tokenAccount) => {
         const accountData = AccountLayout.decode(tokenAccount.account.data);
         const mintAddress = new PublicKey(accountData.mint);
-
         if (mintAddress.equals(tokenMintAddress)) {
           const left = Number(accountData.amount) / 10 ** import.meta.env.VITE_DECIMALS;
           const filled = total - left;

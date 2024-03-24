@@ -7,7 +7,7 @@ const Menu = () => {
   const { isMenuOpen, setIsMenuOpen } = useMainContext();
   return (
     <>
-      <div onClick={() => setIsMenuOpen(false)} hidden={!isMenuOpen} className="h-dvh w-screen fixed inset-0 z-10 bg-black/40 cursor-pointer ">
+      <div onClick={() => setIsMenuOpen(false)} hidden={!isMenuOpen} className="h-dvh w-screen fixed inset-0 z-30 bg-black/40 cursor-pointer ">
         <Container onClick={(e) => e.stopPropagation()} className="p-5 cursor-default  lg:w-[25vw] w-screen bg-pep-nopat h-full absolute right-0 border-l border-primary-800/40">
           <header>
             <Flex className="justify-end">
@@ -19,11 +19,15 @@ const Menu = () => {
           <Body>
             <Grid className="gap-4 text-xl mt-8 place-items-center">
               <img src="./img/logo-xl.png" alt="" />
-              <a href="https://pepoleon.xyz">
+              <a href="#dashboard">
                 <div>Dashboard</div>
               </a>
-              {/* <div>Roadmap</div> */}
-              <div>Tokenomic</div>
+              <a href="#roadmap">
+                <div>Roadmap</div>
+              </a>
+              <a href="#tokenomic">
+                <div>Tokenomic</div>
+              </a>
               {/* <div>Terms</div> */}
               {/* <div>Support</div> */}
               <div className="w-[80%] h-[1px] bg-primary-800/40"></div>

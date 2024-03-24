@@ -45,3 +45,13 @@ body {
     margin: 0;
   }
 }
+/* This will hide the scrollbar */
+::-webkit-scrollbar {
+  width: 2px;
+  background: transparent;
+}
+
+/* This will change the color of the scrollbar to green */
+::-webkit-scrollbar-thumb {
+  background: green;
+}

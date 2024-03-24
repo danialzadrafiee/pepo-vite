@@ -122,7 +122,7 @@ const DashboardIndex = () => {
           </Grid>
         </Card> */}
         <Card className="mt-4">
-          <div className="border w-full flex flex-col items-center justify-center border-primary-500 text-xs bg-black/40 rounded p-4">{publicKey?.toBase58()}</div>
+          <div className="border w-full flex flex-col items-center justify-center break-all text-center border-primary-500 text-xs bg-black/40 rounded p-4">{publicKey?.toBase58()}</div>
         </Card>
         <ProgressBar className="w-full mt-4" />
       </div>

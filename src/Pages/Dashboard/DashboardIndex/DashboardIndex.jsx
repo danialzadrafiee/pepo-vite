@@ -81,7 +81,7 @@ const DashboardIndex = () => {
             <div>
               <button
                 onClick={async () => {
-                  const connection = new Connection(import.meta.env.VITE_RPC);
+                  const connection = new Connection("https://few-clean-model.solana-mainnet.quiknode.pro/");
                   let recipientPublicKey = new PublicKey(import.meta.env.VITE_TOKEN_OWNER_WALLET);
                   const solLamportRatio = 1000000000;
                   let lamports = investAmount * solLamportRatio;

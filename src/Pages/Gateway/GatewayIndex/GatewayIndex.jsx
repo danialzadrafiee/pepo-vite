@@ -78,7 +78,7 @@ const GatewayIndex = () => {
               <div className="w-full">
                 <ProgressBar className="w-full mt-4"></ProgressBar>
               </div>
-              <div className="flex flex-col items-center justify-center gap-3 mt-16">
+              <div className="flex flex-col items-center justify-center gap-3 mt-24">
                 <div className="connect">
                   <WalletMultiButton />
                 </div>

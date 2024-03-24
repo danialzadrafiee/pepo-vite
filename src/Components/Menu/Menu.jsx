@@ -19,7 +19,9 @@ const Menu = () => {
           <Body>
             <Grid className="gap-4 text-xl mt-8 place-items-center">
               <img src="./img/logo-xl.png" alt="" />
-              <div>Dashboard</div>
+              <a href="https://pepoleon.xyz">
+                <div>Dashboard</div>
+              </a>
               {/* <div>Roadmap</div> */}
               <div>Tokenomic</div>
               {/* <div>Terms</div> */}

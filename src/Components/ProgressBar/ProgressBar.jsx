@@ -47,13 +47,14 @@ const ProgressBar = ({ className }) => {
                     <div>{(filled / PPLONPerSolRate).toFixed(2)} SOL</div>
                   </div>
                 )}
-                data-tooltip-place="bottom-end"
-                className="flex h-5 xl:h-8 px-3 text-sm flex-col text-primary-1000 font-semibold drop-shadow justify-center rounded-full overflow-hidden bar-pep  w-full whitespace-nowrap bg-primary-500 "
+                data-tooltip-place="bottom-start"
+                className="flex relative h-5 xl:h-8 px-3 text-sm flex-col text-primary-1000 font-semibold drop-shadow justify-center rounded-full overflow-hidden bar-pep  w-full whitespace-nowrap bg-primary-500 "
                 style={{ width: `${(filled / total) * 100}%` }}
               ></div>
             </div>
             <Absolute className="right-3 text-sm bottom-0 top-0 flex items-center justify-center">{((filled / total) * 100).toFixed(2)}%</Absolute>
           </div>
+            <img src="./img/hourse.png" className="h-10   lg:h-20 z-10 -left-2 lg:-left-10 absolute -top-2" />
           <Absolute className="right-3 text-sm bottom-0 top-14 flex items-center justify-center">Total : {numeral(total).format(0, 0)}</Absolute>
         </div>
       </div>

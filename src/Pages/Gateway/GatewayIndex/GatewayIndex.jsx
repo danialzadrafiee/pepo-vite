@@ -57,7 +57,7 @@ const GatewayIndex = () => {
     <>
       <div className="bg-pep">
         <DepositModal {...{ isModalHidden, setIsModalHidden }} />
-        <Container id="presale" className="p-5 xl:py-10  xl:min-h-screen  min-h-dvh flex  ">
+        <Container id="presale" className="p-5 xl:py-10  xl:min-h-min xl:pb-36  min-h-dvh flex  ">
           <div className="xl:max-w-4xl  2xl:scale-125 origin-top flex flex-col justify-between h-full md:max-h-[800px] mx-auto">
             <header>
               <Flex className="items-center justify-between">
@@ -116,13 +116,62 @@ const GatewayIndex = () => {
           </footer> */}
           </div>
         </Container>
+
+        <Container id="roadmap" className="  xl:py-10 -mt-2  flex ">
+          <div className="flex lg:max-w-4xl mx-auto w-full flex-col">
+            <div className="w-full flex mt-5 items-center justify-between ">
+              <img src="./img/hourse.png" className="w-[160px]  relative lg:w-[250px]" />
+              <div className="text-xs lg:text-xl font-bold bold w-full flex items-center justify-center">About</div>
+            </div>
+            <div className="bg-black/40 p-4 h-64 lg:h-max overflow-auto">
+              <div className="bg-black/50 rounded p-2">
+                <div className="text-xs lg:text-base">
+                  The Pepoleon Army: Meme Conquest Awaits The internet is drowning in normie memes. Bland, uninspired, and utterly forgettable. The dream of a true Meme Empire fades without a
+                  memeperor. But fear not, for Pepoleon has arrived! We, the Pepoleon Army, are tired of these pretenders. We yearn for a leader with a strategic mind, a bicorne that demands respect,
+                  and the undeniable swagger of a true memperor. Join us, and together we shall: Wage war on the normies: No more recycled formats, no more uninspired rehashes. We will conquer the
+                  memes with fresh LOLs and originality. Build a Meme Empire: From the dankest corners of Reddit to the fleeting glory of Twitter trends, our dominion shall spread. We will leave other
+                  meme coins trembling in our wake. Moon with the Power of Laughter: Forget Lambos. We'll be soaring through the digital stratosphere, fueled by the unbridled joy of a perfectly
+                  executed meme. We'll tweet, we'll meme, we'll moon. Are you ready to make Meme Nation truly chad again? Then enlist in the Pepoleon Army today!
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+
+        <Container id="tokenomics" className="  xl:py-10 pb-10 -mt-2 flex  ">
+          <div className="flex lg:max-w-4xl mx-auto w-full flex-col">
+            <div className="w-full flex mt-10 items-center justify-between ">
+              <div className="text-lg pr-5 w-full items-center justify-center flex font-bold ">Tokenomics</div>
+              <img src="./img/tok.png" className="  w-[160px] lg:w-[250px]" />
+            </div>
+            <Grid className="grid-cols-2 p-8 bg-black/50 gap-4">
+              <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
+                <span>TOTAL SUPPLY</span>
+                <span>690B</span>
+              </div>
+              <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
+                <span>PRESALE</span>
+                <span>379.5B</span>
+              </div>
+              <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
+                <span>LP BURNE</span>
+                <span>AT LAUNCH</span>
+              </div>
+              <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
+                <span>OWNERSHIP</span>
+                <span>REVOKE</span>
+              </div>
+            </Grid>
+          </div>
+        </Container>
+
         <Container id="roadmap" className="  xl:py-10 -mt-2  flex ">
           <div className="flex lg:max-w-4xl mx-auto w-full flex-col">
             <div className="w-full flex mt-5 items-center justify-between ">
               <img src="./img/rod.png" className="w-[160px] lg:w-[250px]" />
               <div className="text-xs lg:text-base pr-5">Remember, gentlemen, the corpse of an enemy always smells sweet.</div>
             </div>
-            <div className="bg-black/40 p-4 h-64 overflow-auto">
+            <div className="bg-black/40 p-4 h-64 lg:h-max overflow-auto">
               <div className="bg-black/50 rounded p-2">
                 <h2 className="font-semibold lg:text-lg">Goal</h2>
                 <div className="text-xs lg:text-base">
@@ -151,32 +200,6 @@ const GatewayIndex = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </Container>
-        <Container id="tokenomics" className="  xl:py-10 pb-10 -mt-2 flex  ">
-          <div className="flex lg:max-w-4xl mx-auto w-full flex-col">
-            <div className="w-full flex mt-10 items-center justify-between ">
-              <div className="text-lg pr-5 w-full items-center justify-center flex font-bold ">Tokenomics</div>
-              <img src="./img/tok.png" className="  w-[160px] lg:w-[250px]" />
-            </div>
-            <Grid className="grid-cols-2 p-8 bg-black/50 gap-4">
-              <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
-                <span>TOTAL SUPPLY</span>
-                <span>500M</span>
-              </div>
-              <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
-                <span>100% LP</span>
-                <span>0% PRESALE</span>
-              </div>
-              <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
-                <span>LP BURNE</span>
-                <span>AT LAUNCH</span>
-              </div>
-              <div className="rounded bg-black/70 border p-4 flex flex-col border-primary-500 items-center justify-center">
-                <span>OWNERSHIP</span>
-                <span>REVOKE</span>
-              </div>
-            </Grid>
           </div>
         </Container>
       </div>
